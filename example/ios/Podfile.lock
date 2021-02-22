@@ -1,0 +1,34 @@
+PODS:
+  - audioplayers (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - lofelt (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - audioplayers (from `.symlinks/plugins/audioplayers/ios`)
+  - Flutter (from `Flutter`)
+  - lofelt (from `.symlinks/plugins/lofelt/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+
+EXTERNAL SOURCES:
+  audioplayers:
+    :path: ".symlinks/plugins/audioplayers/ios"
+  Flutter:
+    :path: Flutter
+  lofelt:
+    :path: ".symlinks/plugins/lofelt/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+
+SPEC CHECKSUMS:
+  audioplayers: 455322b54050b30ea4b1af7cd9e9d105f74efa8c
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  lofelt: 976f3039d562571a1ed75af4f3b26392b83a928b
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0
