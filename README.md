@@ -1,8 +1,14 @@
 # 📳 Lofelt
 
+**Unlock the Power of Haptics in Mobile Devices on Flutter**
+
 **Lofelt** builds state-of-the-art **haptic technologies** for iOS and Android developers and creatives.
 
-⚠️ This plugin is not developed by Lofelt ⚠️
+## ⚠️ Disclaimer
+
+🖥 This plugin is NOT developed by Lofelt
+🍏 This plugin is available only for iOS for the moment
+❌ Add Lofelt to your project make it not buildable on Simulator
 
 ## ⛏ Getting started
 
