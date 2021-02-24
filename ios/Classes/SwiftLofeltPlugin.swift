@@ -25,23 +25,39 @@ public class SwiftLofeltPlugin: NSObject, FlutterPlugin {
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch(call.method) {
         case "init":
-            self.initLofelt()
-            result(nil)
-        case "load":
-            self.log(message: "load")
-            if let args = call.arguments as? Dictionary<String, Any>,
-               let path = args["path"] as? String {
-                self.loadFile(flutterPath: path)
+            do {
+                try initLofelt()
                 result(nil)
-              } else {
-                result(FlutterError.init(code: "errorSetDebug", message: "data or format error", details: nil))
-              }
+            } catch {
+                result(FlutterError.init(code: "FAILED_TO_INIT_LOFELT", message: "Something went wrong when trying to init lofelt", details: nil))
+            }
+        case "load":
+            do {
+                let path = try getPathFromArguments(arguments: call.arguments)
+                try loadFile(path: path)
+                result(nil)
+            } catch LoadHapticFileError.arguments {
+                result(FlutterError.init(code: "INVALID_ARGUMENTS", message: "Arguements seems to be badly formatted", details: nil))
+            } catch LoadHapticFileError.path {
+                result(FlutterError.init(code: "INVALID_PATH", message: "Path is absent in arguements or baddly formatted", details: nil))
+            } catch {
+                result(FlutterError.init(code: "FAILED_TO_LOAD_FILE", message: "Something went wrong when trying to load .haptic file", details: nil))
+            }
         case "play":
-            self.play()
-            result(nil)
+            do {
+                try play()
+                result(nil)
+            } catch {
+                result(FlutterError.init(code: "FAILED_TO_PLAY_HAPTIC", message: "Something went wrong when trying to load .haptic file", details: nil))
+            }
         case "stop":
-            self.stop()
-            result(nil)
+            do {
+                try stop()
+                result(nil)
+            } catch {
+                result(FlutterError.init(code: "FAILED_TO_STOP_HAPTIC", message: "Something went wrong when trying to load .haptic file", details: nil))
+            }
+            
         default:
             self.log(message: "Unknown method called on Lofelt channel.")
         }
@@ -54,22 +70,38 @@ public class SwiftLofeltPlugin: NSObject, FlutterPlugin {
         flutterChannel = channel
     }
     
-    private func initLofelt() {
-        haptics = try? LofeltHaptics.init()
+    private func initLofelt() throws {
+        
+        haptics = try LofeltHaptics.init()
+        
+        
     }
     
-    private func loadFile(flutterPath:String) {
-        let hapticData = loadHapticData(flutterFilePath: flutterPath)
-        try? haptics?.load(hapticData as String)
+    private func getPathFromArguments(arguments:Any?)throws -> String {
+        guard let args = arguments as? Dictionary<String, Any> else {
+            throw LoadHapticFileError.arguments
+        }
+        
+        guard let path = args["path"] as? String else {
+            throw LoadHapticFileError.path
+        }
+        
+        return path
     }
     
-    private func play() {
-        try? haptics?.play()
+    private func loadFile(path:String) throws {
+        let hapticData = try loadHapticData(path: path)
+        try haptics?.load(hapticData as String)
     }
     
-    private func stop() {
-        try? haptics?.stop()
+    private func play() throws {
+        try haptics?.play()
     }
+    
+    private func stop() throws {
+        try haptics?.stop()
+    }
+    
     
     private func log(message: StaticString) {
         if #available(iOS 10.0, *) {
@@ -77,12 +109,16 @@ public class SwiftLofeltPlugin: NSObject, FlutterPlugin {
         }
     }
     
-    private func loadHapticData(flutterFilePath: String) -> String {
-        let key = self.registrar?.lookupKey(forAsset: flutterFilePath)
-        let assetPath = Bundle.main.path(forResource: key, ofType: nil)!
-        let hapticData = FileManager.default.contents(atPath: assetPath)!
-        let dataString = NSString(data: hapticData , encoding: String.Encoding.utf8.rawValue)
-        return dataString! as String
+    private func loadHapticData(path: String) throws -> String {
+        guard let key = self.registrar?.lookupKey(forAsset: path),
+              let assetPath = Bundle.main.path(forResource: key, ofType: nil),
+              let hapticData = FileManager.default.contents(atPath: assetPath),
+              let data = NSString(data: hapticData , encoding: String.Encoding.utf8.rawValue),
+              let dataString = data as String?
+        else {
+            throw LoadHapticFileError.assetNotFound
+        }
+        return dataString
     }
 }
 
