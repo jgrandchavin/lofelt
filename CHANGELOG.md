@@ -1,3 +1,3 @@
-## 0.x.x
+## 0.0.1
 * Setting up project
 

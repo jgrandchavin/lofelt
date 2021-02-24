@@ -1,8 +1,8 @@
 name: lofelt
-description: A new flutter plugin project.
+description: Unlock the Power of Haptics in Mobile Devices on Flutter
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/jgrandchavin/lofelt
+repository: https://github.com/jgrandchavin/lofelt
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
