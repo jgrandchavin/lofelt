@@ -1,6 +1,6 @@
 # 📳 Lofelt
 
-![](lofelt_logo.png)
+![test image size](lofelt_logo.png){:height="50%" width="50%"}
 
 🔗 [Official Lofelt website](https://lofelt.com)
 
