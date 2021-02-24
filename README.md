@@ -7,7 +7,9 @@
 ## ⚠️ Disclaimer
 
 🖥 This plugin is NOT developed by Lofelt
+
 🍏 This plugin is available only for iOS for the moment
+
 ❌ Add Lofelt to your project make it not buildable on Simulator
 
 ## ⛏ Getting started
