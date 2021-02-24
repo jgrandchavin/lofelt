@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.x.x
+* Setting up project
 
-* TODO: Describe initial release.
