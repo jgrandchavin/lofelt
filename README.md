@@ -1,5 +1,9 @@
 # 📳 Lofelt
 
+![](lofelt_logo.png)
+
+🔗 [Official Lofelt website](https://lofelt.com)
+
 **Unlock the Power of Haptics in Mobile Devices on Flutter**
 
 **Lofelt** builds state-of-the-art **haptic technologies** for iOS and Android developers and creatives.
