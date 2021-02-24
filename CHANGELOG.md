@@ -1,3 +1,6 @@
+## 0.0.2
+* Manage error catching to prevent crash on iOS 
+
 ## 0.0.1
 * Setting up project
 
