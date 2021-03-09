@@ -6,7 +6,7 @@ import os
 
 public class SwiftLofeltPlugin: NSObject, FlutterPlugin {
     
-    private static let channelName = "dev.juliengrandchavin.lofelt"
+    private static let channelName = "lofelt"
     private var flutterChannel: FlutterMethodChannel!
     private var registrar: FlutterPluginRegistrar? = nil
     
