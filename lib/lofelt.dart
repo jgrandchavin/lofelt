@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class Lofelt {
-  static const MethodChannel _channel = const MethodChannel('dev.juliengrandchavin.lofelt');
+  static const MethodChannel _channel = const MethodChannel('lofelt');
 
   static Future<String> init() async {
     final String test = await _channel.invokeMethod('init');
