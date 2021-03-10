@@ -62,13 +62,11 @@ class _MyAppState extends State<MyApp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                FlatButton(
-                  color: Colors.blue,
+                ElevatedButton(
                   onPressed: play,
                   child: Icon(Icons.play_arrow),
                 ),
-                FlatButton(
-                  color: Colors.blue,
+                ElevatedButton(
                   onPressed: stop,
                   child: Icon(Icons.stop),
                 ),

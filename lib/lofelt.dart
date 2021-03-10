@@ -6,9 +6,8 @@ class Lofelt {
   static const MethodChannel _channel = const MethodChannel('lofelt');
 
   /// Init Lofelt
-  static Future<String> init() async {
-    final String test = await _channel.invokeMethod('init');
-    return test;
+  static Future<void> init() async {
+    return _channel.invokeMethod('init');
   }
 
   /// Load file contained in [path] in Lofelt
