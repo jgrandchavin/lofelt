@@ -1,3 +1,7 @@
+## 0.0.3
+* Update Dart documentation
+* Manage Not implemented error on Android
+
 ## 0.0.2
 * Manage error catching to prevent crash on iOS 
 
