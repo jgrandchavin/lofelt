@@ -4,6 +4,7 @@ import LofeltHaptics
 import os
 
 
+@available(iOS 13, *)
 public class SwiftLofeltPlugin: NSObject, FlutterPlugin {
     
     private static let channelName = "lofelt"
