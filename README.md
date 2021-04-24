@@ -10,15 +10,15 @@
 
 ## ⚠️ Disclaimer
 
-🖥 This plugin is NOT developed by Lofelt
+🖥 This package is NOT developed by Lofelt
 
 🍏 The haptics works only for iOS for the moment
+
+📃 You will need a Lofelt licence to use this package and create `.haptic` files
 
 ## ⛏ Getting started
 
 ### 🎙 Create .haptic files
-
-⚠️ To do next steps you need to get a Lofelt licence.
 
 To create `.haptic` file from sound, download [Lofelt Studio](https://lofelt.com/downloads) and see [Lofelt Studio documentation](https://developer.lofelt.com)
 
