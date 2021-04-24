@@ -12,13 +12,13 @@
 
 🖥 This plugin is NOT developed by Lofelt
 
-🍏 This plugin is available only for iOS for the moment
-
-❌ Add Lofelt to your project make it not buildable on Simulator
+🍏 The haptics works only for iOS for the moment
 
 ## ⛏ Getting started
 
 ### 🎙 Create .haptic files
+
+⚠️ To do next steps you need to get a Lofelt licence.
 
 To create `.haptic` file from sound, download [Lofelt Studio](https://lofelt.com/downloads) and see [Lofelt Studio documentation](https://developer.lofelt.com)
 
@@ -62,8 +62,7 @@ To create `.haptic` file from sound, download [Lofelt Studio](https://lofelt.com
 | Feature | Status |
 | ------------- |:-------------:|
 | Play .haptic on iOS 🍏 | ✅ |
-| Play .haptic on Android 🤖 | ❌ |   
-| Unit test Flutter plugin | ❌ |    
+| Play .haptic on Android 🤖 | ❌ |     
 
 
 
