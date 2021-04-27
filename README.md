@@ -14,7 +14,7 @@
 
 🍏 The haptics works only for iOS for the moment
 
-📃 You will need a Lofelt licence to use this package and create `.haptic` files
+📃 Lofelt is busy moving their iOS framework and Android library to a permissive license so you can safely use this package without a Lofelt license.
 
 ## ⛏ Getting started
 
