@@ -1,3 +1,6 @@
+## 0.1.1
+* Update README.md
+
 ## 0.1.0
 * Upgrade Lofelt iOS framework to 1.1.0-beta.5
 * Fix crash on iOS < 13.0
