@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,7 +36,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> play() async {
-    audioPlayer = await cache.play('audio/lfa.mp3', mode: PlayerMode.LOW_LATENCY);
+    audioPlayer =
+        await cache.play('audio/lfa.mp3', mode: PlayerMode.LOW_LATENCY);
     await Future.delayed(Duration(milliseconds: 200));
     Lofelt.play();
   }
