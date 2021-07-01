@@ -15,7 +15,7 @@ dependencies:
   lofelt:
     path: ../
 
-  audioplayers: ^0.17.4
+  audioplayers: ^0.19.0
 
 dev_dependencies:
   flutter_test:

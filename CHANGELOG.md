@@ -1,3 +1,6 @@
+## 0.1.2
+* Fix example iOS build
+
 ## 0.1.1
 * Update README.md
 
