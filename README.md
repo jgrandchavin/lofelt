@@ -4,23 +4,25 @@
 
 🔗 [Official Lofelt website](https://lofelt.com)
 
+🔗 [Lofelt SDK Repository](https://github.com/Lofelt/lofelt-studio-sdk/)
+
 **Unlock the Power of Haptics in Mobile Devices on Flutter**
 
 **Lofelt** builds state-of-the-art **haptic technologies** for iOS and Android developers and creatives.
 
 ## ⚠️ Disclaimer
 
-🖥 This package is NOT developed by Lofelt
+🖥 This package is NOT developed by Lofelt.
 
 🍏 The haptics works only for iOS for the moment
 
-📃 Lofelt is busy moving their iOS framework and Android library to a permissive license so you can safely use this package without a Lofelt license.
-
 ## ⛏ Getting started
 
-### 🎙 Create .haptic files
+### 🎙 Haptic files
 
-To create `.haptic` file from sound, download [Lofelt Studio](https://lofelt.com/downloads) and see [Lofelt Studio documentation](https://developer.lofelt.com)
+You can download a [free to use libary](https://lofelt.com/downloads#assets) of `.haptic` files from Lofelt's website. 
+
+To create your own custom `.haptic` file from sound, download [Lofelt Studio](https://lofelt.com/downloads) and see [Lofelt Studio documentation](https://developer.lofelt.com)
 
 ### 💼 Add .haptic files in your pubspec.yaml
 
