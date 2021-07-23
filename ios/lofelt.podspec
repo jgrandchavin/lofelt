@@ -21,10 +21,6 @@ A new flutter plugin project.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
   
-  s.script_phase = { :name => "Import script",
-                      :script => "${PODS_TARGET_SRCROOT}/import_frameworks.sh",
-   :execution_position => :before_compile }
-  
   s.preserve_paths = 'LofeltHaptics.xcframework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework LofeltHaptics' }
   s.vendored_frameworks = 'LofeltHaptics.xcframework'
