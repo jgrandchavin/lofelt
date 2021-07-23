@@ -25,7 +25,7 @@ A new flutter plugin project.
                       :script => "${PODS_TARGET_SRCROOT}/import_frameworks.sh",
    :execution_position => :before_compile }
   
-  s.preserve_paths = 'LofeltHaptics.framework'
+  s.preserve_paths = 'LofeltHaptics.xcframework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework LofeltHaptics' }
-  s.vendored_frameworks = 'LofeltHaptics.framework'
+  s.vendored_frameworks = 'LofeltHaptics.xcframework'
 end
