@@ -1,6 +1,6 @@
 name: lofelt
 description: Unlock the Power of Haptics in Mobile Devices on Flutter. Lofelt builds state-of-the-art haptic technologies for iOS and Android developers and creatives.
-version: 0.1.2
+version: 0.2.0
 homepage: https://github.com/jgrandchavin/lofelt
 repository: https://github.com/jgrandchavin/lofelt
 
