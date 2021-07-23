@@ -1,3 +1,6 @@
+## 0.2.0
+* Upgrade iOS Lofelt SDK framework to 1.2.0
+
 ## 0.1.2
 * Fix example iOS build
 
